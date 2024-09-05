@@ -57,7 +57,7 @@ if(isset($_POST["login"])){
     
     $query="SELECT id,username,password FROM register WHERE username='$username' AND password='$password'";
 
-    $result=mysqli_query($connection,$query);
+    $result=mysqli_query($conn,$query);
     $user = mysqli_fetch_array($result,MYSQLI_ASSOC);
     // print_r($user);
     

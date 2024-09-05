@@ -70,7 +70,7 @@ $result=mysqli_query($conn,$query);
                         </div>
                         <div class="mb-0">
                             <label class="form-label">Product Description</label>
-                            <textarea class="form-control" placeholder="Enter Product Description" name="description"></textarea>
+                            <textarea class="form-control" placeholder="Enter Product Description in 2 line" name="description"></textarea>
                         </div>
                     </div>
                 </div>

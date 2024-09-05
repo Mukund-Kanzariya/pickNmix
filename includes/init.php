@@ -6,7 +6,7 @@ define("BASE_URL", "/grocery");
 
 date_default_timezone_set('Asia/Kolkata');
 
-$connection = mysqli_connect("localhost","root", "","grocerymanagement");
+$conn = mysqli_connect("localhost","root", "","Picknmix");
 
 function pathOf($path)
 {
@@ -17,5 +17,3 @@ function urlOf($path)
 {
     return BASE_URL . '/' . $path;
 }
-
-// session_start();

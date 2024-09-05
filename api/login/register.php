@@ -37,12 +37,12 @@ if(count($errors) > 0){
 }else{
 
     $query="INSERT INTO register(name,mobileno,email,address,username,password) VALUES('$name','$mobileno','$email','$address','$username','$password')";
-            $result= mysqli_query($connection,$query);
+            $result= mysqli_query($conn,$query);
             
             if($result){
                 header("location:../../pages/login/login");
             }else{
-                die(mysqli_error($connection));
+                die(mysqli_error($conn));
             }
 }
 
