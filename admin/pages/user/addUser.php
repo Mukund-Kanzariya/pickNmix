@@ -1,13 +1,7 @@
 <?php
 
-// session_start();
-
-// if(!isset($_SESSION['userId'])){
-//     header("Location:../authentication/login.php");
-// }
-
-
 require '../../includes/init.php';
+include pathOf("auth.php");
 include pathOf("includes/header.php");
 include pathOf("includes/navbar.php");
 
@@ -97,15 +91,15 @@ $result=mysqli_query($conn,$query);
                             <h5>Addressing</h5>
                         </div>
                         <div class="card-body">
-                            <div class="mb-0">
+                            <div class="mb-3">
                                 <label class="form-label">Address</label>
                                 <textarea class="form-control" placeholder="Enter Address" name="address" require></textarea>
                             </div>
-                            <div class="mb-0">
+                            <div class="mb-3">
                                 <label class="form-label">City</label>
                                 <input type="text" class="form-control" placeholder="Enter City" name="city" require/>
                             </div>
-                            <div class="mb-0">
+                            <div class="mb-3">
                                 <label class="form-label">State</label>
                                 <input type="text" class="form-control" placeholder="Enter State" name="state" require/>
                             </div>

@@ -41,7 +41,7 @@ require '../../includes/init.php';
 
                     <div class="signin-form">
 
-        <!-- code for the login form -->
+                        <!-- code for the login form -->
 
                         <?php
 
@@ -64,6 +64,8 @@ if(isset($_POST["login"])){
     if($user){
             session_start();
             $_SESSION["user"] = "yes";
+            $_SESSION['userId'] = $user['id'];
+            $_SESSION['userName'] = $user['username'];
             header("location:../../");
     }else{
         echo "<script>";

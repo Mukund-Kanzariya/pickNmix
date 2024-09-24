@@ -1,6 +1,7 @@
 <?php
 
-session_start(); // Start the session
+session_name('grocery_admin');
+session_start(); // Start the session with the same name as in auth.php
 
 require '../../includes/init.php';
 

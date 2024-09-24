@@ -144,7 +144,7 @@ if (isset($_SESSION['userId'])) {
             <span class="pc-mtext">Chat</span></a
           >
         </li> -->
-                <li class="pc-item pc-hasmenu">
+                    <!-- <li class="pc-item pc-hasmenu">
                     <a href="#!" class="pc-link">
                         <span class="pc-micon">
                             <i class="ph-duotone ph-image"></i>
@@ -156,6 +156,37 @@ if (isset($_SESSION['userId'])) {
                         <li class="pc-item"><a class="pc-link" href="../application/gallery-masonry.html">Masonry</a>
                         </li>
                     </ul>
+                </li> -->
+                <li class="pc-item pc-hasmenu">
+                    <a href="#!" class="pc-link">
+                        <span class="pc-micon">
+                            <i class="ph-duotone ph-package"></i>
+
+                        </span>
+                        <span class="pc-mtext">Orders</span><span class="pc-arrow"><i
+                                data-feather="chevron-right"></i></span></a>
+                    <ul class="pc-submenu">
+
+                        <li class="pc-item"><a class="pc-link" href="<?= urlOf('pages/orders/orderList') ?>">Order
+                                History</a></li>
+                    </ul>
+                </li>
+                <li class="pc-item pc-hasmenu">
+                    <a href="#!" class="pc-link">
+                        <span class="pc-micon">
+                            <i class="ph-duotone ph-envelope"></i>
+
+                        </span>
+                        <span class="pc-mtext">Contact</span><span class="pc-arrow"><i
+                                data-feather="chevron-right"></i></span></a>
+                    <ul class="pc-submenu">
+
+                        <li class="pc-item"><a class="pc-link" href="<?= urlOf('pages/customer/contact') ?>">Contact
+                                List
+                            </a></li>
+                        <li class="pc-item"><a class="pc-link" href="<?= urlOf('pages/customer/review') ?>">Review
+                                List</a></li>
+                    </ul>
                 </li>
                 <li class="pc-item pc-hasmenu">
                     <a href="#!" class="pc-link">
@@ -164,7 +195,7 @@ if (isset($_SESSION['userId'])) {
                             <!-- <i class="ph-duotone ph-package"></i> -->
 
                         </span>
-                        <span class="pc-mtext">Product</span><span class="pc-arrow"><i 
+                        <span class="pc-mtext">Product</span><span class="pc-arrow"><i
                                 data-feather="chevron-right"></i></span></a>
                     <ul class="pc-submenu">
 
@@ -337,14 +368,14 @@ if (isset($_SESSION['userId'])) {
                         </form>
                     </div>
                 </li>
-                <li class="pc-h-item d-none d-md-inline-flex">
+                <!-- <li class="pc-h-item d-none d-md-inline-flex">
                     <form class="form-search">
                         <i class="ph-duotone ph-magnifying-glass icon-search"></i>
                         <input type="search" class="form-control" placeholder="Search..." />
 
                         <button class="btn btn-search" style="padding: 0"><kbd>ctrl+k</kbd></button>
                     </form>
-                </li>
+                </li> -->
             </ul>
         </div>
         <!-- [Mobile Media Block end] -->

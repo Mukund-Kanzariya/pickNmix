@@ -11,6 +11,7 @@ $statusMsg = "";
 if (isset($_POST["submit"])) {
     $name = $_POST["name"];
     $category = $_POST["category"];
+    $measurement= $_POST["measurement"];
     $desc = $_POST["description"];
     $price = $_POST["price"];
 
@@ -105,7 +106,7 @@ if (isset($_POST["submit"])) {
         $update_file = $old_image;
     }
 
-    $sql = "UPDATE `product` SET `Name`='$name',`CategoryId`='$category',`Description`='$desc',`Price`='$price',`Image`='$update_file' WHERE id='$id'";
+    $sql = "UPDATE `product` SET `Name`='$name',`CategoryId`='$category',`Measurement`='$measurement',`Description`='$desc',`Price`='$price',`Image`='$update_file' WHERE id='$id'";
     $result = mysqli_query($conn, $sql);
 
     if ($result) {

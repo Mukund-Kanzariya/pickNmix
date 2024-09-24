@@ -9,13 +9,14 @@ $statusMsg = "";
 if (isset($_POST["submit"])) {
     $name = $_POST["name"];
     $category= $_POST["category"];
+    $measurement= $_POST["measurement"];
     $desc = $_POST["description"];
     $price = $_POST["price"];
 
     $random = rand(1, 99999);
     $image = $random . '-' . $_FILES["image"]["name"];
 
-    $sql = "INSERT INTO `product`(`Name`, `CategoryId`,`Description`,`Price`, `Image`) VALUES ('$name','$category','$desc','$price','$image')";
+    $sql = "INSERT INTO `product`(`Name`, `CategoryId`,`Measurement`,`Description`,`Price`, `Image`) VALUES ('$name','$category','$measurement','$desc','$price','$image')";
     $result = mysqli_query($conn, $sql);
     
     if (!empty($_FILES["image"]["name"])) {

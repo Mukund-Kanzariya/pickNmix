@@ -1,19 +1,14 @@
 <?php   
 
-session_start();
-
-if(!isset($_SESSION['userId'])){
-    header("Location:../authentication/login.php");
-}
-
-
 require '../../includes/init.php';
+include pathOf("auth.php");
 include pathOf('includes/header.php');
 include pathOf('includes/navbar.php');
 
 $query = "SELECT 
     product.Id,
     product.Name,
+    product.Measurement,
     product.Description,
     product.Price,
     product.Image,
@@ -72,6 +67,7 @@ $index=1;
                                         <th class="text-center">Product Image</th>
                                         <th class="text-center">Name</th>
                                         <th class="text-center">Categories</th>
+                                        <th class="text-center">Measurement</th>
                                         <th class="text-center">Description</th>
                                         <th class="text-center">Price</th>
                                         <!-- <th class="text-end">Price</th> -->
@@ -94,6 +90,7 @@ $index=1;
                                         </td>
                                         <td class="text-center"><?= $row['Name'] ?></td>
                                         <td class="text-center"><?= $row['CategoryId'] ?></td>
+                                        <td class="text-center"><?= $row['Measurement'] ?></td>
                                         <td class="text-center"><?= $row['Description'] ?></td>
                                         <td class="text-center"><?= $row['Price'] ?></td>
                                         <td class="text-center">

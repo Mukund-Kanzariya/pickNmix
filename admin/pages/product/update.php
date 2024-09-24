@@ -1,12 +1,7 @@
 <?php
 
-session_start();
-
-if(!isset($_SESSION['userId'])){
-    header("Location:../authentication/login.php");
-}
-
 require '../../includes/init.php';
+include pathOf("auth.php");
 include pathOf("includes/header.php");
 include pathOf("includes/navbar.php");
 
@@ -15,6 +10,7 @@ $id=$_GET['updateId'];
 $query = "SELECT 
     product.Id,
     product.Name,
+    product.Measurement,
     product.Description,
     product.Price,
     product.Image,
@@ -70,7 +66,8 @@ $result1=mysqli_query($conn,$query1);
                             <input type="hidden" name="id" value="<?= $row['Id'] ?>">
                             <div class="mb-3">
                                 <label class="form-label">Product Name</label>
-                                <input type="text" class="form-control" name="name" placeholder="Enter Product Name" value="<?= $row['Name'] ?>"/>
+                                <input type="text" class="form-control" name="name" placeholder="Enter Product Name"
+                                    value="<?= $row['Name'] ?>" />
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Category</label>
@@ -82,10 +79,23 @@ $result1=mysqli_query($conn,$query1);
                                     <?php }?>
                                 </select>
                             </div>
+                            <div class="mb-3">
+                                <label class="form-label">Unit of Measurement</label>
+                                <select class="form-select" name="measurement" required>
+                                    <option disabled selected>Select Unit</option>
+                                    <option value="Kilogram">Kilogram (kg)</option>
+                                    <option value="Gram">Gram (g)</option>
+                                    <option value="Liter">Liter (L)</option>
+                                    <option value="Milliliter">Milliliter (mL)</option>
+                                    <option value="Piece">Piece (pcs)</option>
+                                     <option value="Packet">Packet</option>
+                                    <option value="Dozen">Dozen</option>
+                                </select>
+                            </div>
                             <div class="mb-0">
                                 <label class="form-label">Product Description</label>
-                                <textarea class="form-control" placeholder="Enter Product Description"
-                                    name="description" value="<?= $row['Description'] ?>"></textarea>
+                                <input class="form-control" placeholder="Enter Product Description"
+                                    name="description" value="<?= $row['Description'] ?>"></input>
                             </div>
                         </div>
                     </div>
@@ -107,7 +117,8 @@ $result1=mysqli_query($conn,$query1);
                                                 data-bs-title="Price"></i></label>
                                         <div class="input-group mb-3">
                                             <span class="input-group-text">Rs.</span>
-                                            <input type="text" class="form-control" placeholder="Price" name="price" value="<?= $row['Price'] ?>"/>
+                                            <input type="text" class="form-control" placeholder="Price" name="price"
+                                                value="<?= $row['Price'] ?>" />
                                         </div>
                                     </div>
                                 </div>

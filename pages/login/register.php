@@ -29,7 +29,7 @@ require '../../includes/init.php';
 
     <div class="main">
 
-    
+
 
         <!-- Sign up form -->
         <section class="signup">
@@ -37,9 +37,9 @@ require '../../includes/init.php';
                 <div class="signup-content">
                     <div class="signup-form">
 
-                <!-- code for the register -->
+                        <!-- code for the register -->
 
-                    <?php
+                        <?php
 
 
 //  print_r($_POST);
@@ -101,8 +101,7 @@ if(count($errors) > 0){
 
 
                         <h2 class="form-title">Register</h2>
-                        <form action="register" method="POST" class="register-form"
-                            id="register-form">
+                        <form action="register" method="POST" class="register-form" id="register-form">
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="name" placeholder="Your Name" />

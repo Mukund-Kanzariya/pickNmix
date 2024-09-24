@@ -1,13 +1,7 @@
 <?php
 
-session_start();
-
-if(!isset($_SESSION['userId'])){
-    header("Location:../authentication/login.php");
-}
-
-
 require '../../includes/init.php';
+include pathOf("auth.php");
 include pathOf("includes/header.php");
 include pathOf("includes/navbar.php");
 
