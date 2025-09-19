@@ -51,7 +51,7 @@ while ($row = mysqli_fetch_array($result)) {
                 <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                     <div class="navbar-nav mx-auto">
                         <a href="<?= urlOf('index') ?>" class="nav-item nav-link active">Home</a>
-                        <a href="<?= urlOf('pages/shop') ?>" class="nav-item nav-link">Shop</a>
+                        <a href="<?= urlOf('pages/shop') ?>" target="_blank" class="nav-item nav-link">Shop</a>
                         <a href="<?= urlOf('pages/shopDetails') ?>" class="nav-item nav-link">Shop Detail</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
